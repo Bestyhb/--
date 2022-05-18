@@ -1,0 +1,39 @@
+## user setting
+1. add, del user
+
+| command | description |
+| ------- | ----------- |
+|# useradd usrname| add user usrname|
+|# passwd usrname | set user passwd |
+
+
+2. change user name, passwd
+
+
+## root setting
+**与CentOS不同，Ubuntu系统并不默认允许用户进行root登录（包括本地图形化和远程登录），登录需要进行配置。**
+
+1. gui root login(local)
+```
+/etc/pam.d/gdm-autologin
+/etc/pam.d/gdm-password
+/root/.profile
+```
+
+> 注释 gdm-autologin 和 gdm-password 中的 "auth required pam_succeed_if.so user !=root quiet_success"
+> 注释 .profile 中 "mesg n || true"，添加 "tty -s && mesg n || true"
+
+2. ssh root login(remot)
+```
+/etc/ssh/sshd_config
+```
+
+> 修改配置Authentication为
+> PermitRootLogin yes
+> StrictModes yes
+> LoginGraceTime 120
+> 并重设usrroot密码
+
+参考：
+1. [Ubuntu的root账户登录图形界面失败的问题 - CSDN](https://www.csdn.net/tags/MtTaMg1sODcxMzY0LWJsb2cO0O0O.html)
+2. [ubuntu ssh root登陆](https://blog.csdn.net/a603423130/article/details/107605400?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-107605400-blog-88806581.pc_relevant_default&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-107605400-blog-88806581.pc_relevant_default&utm_relevant_index=1)
