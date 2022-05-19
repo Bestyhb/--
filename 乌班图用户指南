@@ -6,14 +6,22 @@
 |# useradd usrname| add user usrname|
 |# passwd usrname | set user passwd |
 
+> 强制删除用户及目录(用于解决用户线程占用和无法创建相同用户名)
+```
+rm -rf /home/username
+userdel -f username
+userdel -f username
+```
 
 2. change user name, passwd
 
 
-## root setting
+# root setting
+
 **与CentOS不同，Ubuntu系统并不默认允许用户进行root登录（包括本地图形化和远程登录），登录需要进行配置。**
 
 1. gui root login(local)
+
 ```
 /etc/pam.d/gdm-autologin
 /etc/pam.d/gdm-password
@@ -24,6 +32,7 @@
 > 注释 .profile 中 "mesg n || true"，添加 "tty -s && mesg n || true"
 
 2. ssh root login(remot)
+
 ```
 /etc/ssh/sshd_config
 ```

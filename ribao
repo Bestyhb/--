@@ -1,5 +1,11 @@
+220519
 1. 解决本地ssh虚拟机无法连接的问题。
 通过检查虚拟机VMware Network Adapter VMnet1、8地址，发现网段不同，重置后使用NAT模式可以主客机ping后互通，恢复连接。
 2. 虚拟机重新配置Ubuntu root，使其能够通过命令行和图形界面登录。
 3. 建立"Ubuntu User Guide.md"，新增 root setting 和 user setting 两个章节
 4. 新增Windows Git Reop，并提交至Github（7 Files）。
+220520
+1. 观看训练营直播课第五章第一、二节。
+2. 《乌班图用户指南》完善user setting章节
+3. create <file commands.md>
+

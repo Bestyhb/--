@@ -1,4 +1,4 @@
-| Unbuntu builtin | |
+| Unbuntu  | |
 |------------|----|
 | job_spec [&] |        |                                                               
 | (( expression )) |        |                                                           
