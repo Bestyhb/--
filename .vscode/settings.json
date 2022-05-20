@@ -1,0 +1,5 @@
+{
+    "javascript.suggest.includeCompletionsForImportStatements": true,
+    "editor.tabCompletion": "on",
+    "editor.suggest.showWords": false
+}
