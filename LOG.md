@@ -26,4 +26,5 @@
 "day6","saturday,none."
 },
 "20220522":{
-"day7","Sunday,重构study}
+"day7","Sunday,1.mac拉取github，并建立本地分支。2.构学习文档，包括重命名、LOG文档采取json格式、删除重复文档。
+},
