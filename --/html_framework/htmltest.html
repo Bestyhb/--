@@ -1,0 +1,38 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS样式表的引入</title>
+        <style>
+            *{align:0px;margin:0px;}
+            body{text-align:center;}
+            iframe{width:80%;height:300px;}
+        </style>
+    </head>
+    <body>
+        <h1 style="color:pink">CSS样式表</h1>
+        <p>美化页面和设置各元素的显示样式</p>
+        <a href="https://www.baidu.com" target="top">this is a link.</a>
+        <div id="main">
+            <div id="first">
+                <a href="#" target="_self">跳转1</a>
+            </div>
+            <div id="second">
+                <a href="#" target="_blank">跳转2</a>
+            </div>
+            <div id="third">
+                <a href="fourth.html" target="three">跳转3</a>
+            </div>
+            <div id="ad-iframe">
+                <!-- show the frame -->
+                <div><span>只显示容器</span></div>
+                <iframe name="three" width="100%" height="100%" src="" frameborder="2" seamless></iframe>
+                <!-- show the frame and the content -->
+                <div><span>同时显示容器和链接页面</span></div>
+                <iframe name="three" width="100%" height="100%" src="fourth.html" frameborder="2" seamless></iframe>
+                <!-- <iframe name="big" width="800px" height="300px"  src="./fourth.html" frameborder="2" seamless> -->
+                </iframe>
+            </div>
+        </div>
+        <!--在父窗体中打开链接，在窗口与顶级框架中，等同于_self。在实现过程中，跳转按钮1,2很容易实现，但是跳转3中，在主页面写了一个iframe框架，在点击按钮3时，页面内容显示在框架中。在实现跳转4，与跳转5时，采用大框架套中框架，中框架套小框架，而按钮与内容显示在小框架中。-->
+    </body>
+</html>
